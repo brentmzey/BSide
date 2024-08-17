@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.cxx.io.removeDuplicateFiles
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -49,7 +50,6 @@ kotlin {
             isStatic = true
         }
     }
-    
     sourceSets {
         val desktopMain by getting
         
@@ -94,6 +94,7 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            pickFirsts += setOf("assets/bside/bside_logo.png")
         }
     }
     buildTypes {
