@@ -100,7 +100,6 @@ fun SwipeableCardStack(cards: List<String>) {
     }
 }
 
-// Step 1: Create a DrawableResource instance
 @OptIn(InternalResourceApi::class)
 val bsideLogoResource = DrawableResource(
     id = "bside_logo",
