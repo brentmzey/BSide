@@ -1,4 +1,4 @@
-# ![BSide Project](assets/bside/bside_logo.png)
+# ![BSide Project](https://drive.google.com/file/d/1M_T7CeZ-pmHzxKE_80cQw9RW0wu3E030/view?usp=sharing)
 
 ## Overview
 
@@ -36,12 +36,17 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 - **Java**:
   ```sh
-  sdk install java 11.0.11.hs-adpt
+  sdk install java 11.0.24-tem
   ```
 
 - **Kotlin**:
   ```sh
-  sdk install kotlin
+  sdk install kotlin 2.0.10
+  ```
+  
+- **Gradle**:
+  ```sh
+  sdk install gradle 8.10
   ```
 
 ### kdoctor
