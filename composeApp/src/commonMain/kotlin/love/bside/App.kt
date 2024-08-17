@@ -114,29 +114,20 @@ val bsideLogoResource = DrawableResource(
     )
 )
 
-// Step 2: Use the painterResource function to load the DrawableResource in a @Composable function
 @Composable
 fun BSideLogo() {
     Image(
         painter = painterResource(bsideLogoResource),
         contentDescription = "BSide Logo",
-        modifier = Modifier.size(50.dp).padding(16.dp)
+        modifier = Modifier.size(150.dp).padding(16.dp)
     )
 }
 
-@OptIn(InternalResourceApi::class)
 @Composable
 fun App() {
     MaterialTheme {
         Box(modifier = Modifier.fillMaxSize()) {
-            Image(
-                painter = painterResource(bsideLogoResource),
-                contentDescription = "BSide Logo",
-                modifier = Modifier
-                    .size(50.dp)
-                    .padding(16.dp)
-                    .align(Alignment.TopStart)
-            )
+            BSideLogo()
             val cards = listOf("Card 1", "Card 2", "Card 3")
             SwipeableCardStack(cards = cards)
         }
