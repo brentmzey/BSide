@@ -1,4 +1,4 @@
-# ![BSide Project](https://drive.google.com/file/d/1M_T7CeZ-pmHzxKE_80cQw9RW0wu3E030/view?usp=sharing)
+# ![BSide Project](composeApp/src/main/res/mipmap-xxxhdpi/bside_logo.webp)
 
 ## Overview
 
