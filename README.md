@@ -1,4 +1,9 @@
-# ![BSide Project](composeApp/src/main/res/mipmap-xxxhdpi/bside_logo.webp)
+<table>
+  <tr>
+    <td><img src="composeApp/src/main/res/mipmap-xhdpi/bside_logo_foreground.webp" alt="BSide Logo" width="100"/></td>
+    <td><h1>BSide Project</h1></td>
+  </tr>
+</table>
 
 ## Overview
 
