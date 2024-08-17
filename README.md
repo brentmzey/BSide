@@ -160,37 +160,28 @@ Gradle is used to build the project. Ensure you have Gradle installed or use the
 #### Building the Project
 
 ```sh
-./gradlew build
+gradle build
 ```
+
+To enable better debugging and stacktrace information, you can use the following command:
+
+```sh
+gradle build --stacktrace
+```  
 
 ### Running the BSide App
 
-The BSide app can be run on different platforms using Gradle tasks. Here are the commands for each platform:
+## Gradle Tasks
 
-- **Android**:
-  ```sh
-  gradle :composeApp:installDebug
-  gradle :composeApp:runDebug
-  ```
+### To see all the available Gradle tasks available for this project, run:
 
-- **iOS**:
-  ```sh
-  gradle :composeApp:iosDeploy
-  ```
-
-- **Desktop**:
-  ```sh
-  gradle :composeApp:run
-  ```
-
-- **Web**:
-  ```sh
-  gradle :composeApp:wasmJsBrowserRun
-  ```
+```sh
+gradle tasks
+```
 
 ### Running in IDE
 
-You can also run the app directly from your IDE (e.g., Android Studio) by selecting the appropriate run configuration for the target platform.
+Before deployment phases, I recommend that you run the app(s) directly from your IDE (e.g., Android Studio) by selecting the appropriate run configuration for the target platform.
 These are configured in the top-middle-right of the IDE window. Where you will see a dropdown with the name of the project, click on it and select the target platform you want to run.
 For example:
 - **Android**:
