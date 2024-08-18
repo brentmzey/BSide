@@ -2,7 +2,8 @@
   <img src="composeApp/src/main/res/mipmap-xhdpi/bside_logo_foreground.webp" alt="BSide Logo" width="100"/>
 </div>
 
-<h1>BSide Project</h1>
+<h1>BSide</h1>
+<h4>A new way of app dating</h4>
 
 ## Overview
 
@@ -161,12 +162,16 @@ Gradle is used to build the project. Ensure you have Gradle installed or use the
 
 ```sh
 gradle build
+# or using the Gradle wrapper in the repo:
+./gradlew build
 ```
 
 To enable better debugging and stacktrace information, you can use the following command:
 
 ```sh
 gradle build --stacktrace
+# or using the Gradle wrapper in the repo:
+./gradlew build --stacktrace
 ```  
 
 ### Running the BSide App
@@ -177,6 +182,8 @@ gradle build --stacktrace
 
 ```sh
 gradle tasks
+# or using the Gradle wrapper in the repo:
+./gradlew tasks
 ```
 
 ### Running in IDE
