@@ -3,7 +3,7 @@
 </div>
 
 <h1>BSide</h1>
-<h4>A new way of app dating</h4>
+<h4>A new way of app-based dating. Skip the texting dance and check the vibe IRL.</h4>
 
 ## Overview
 
