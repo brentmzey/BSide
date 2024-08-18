@@ -39,6 +39,7 @@ kotlin {
     
     sourceSets {
         commonMain.dependencies {
+//            implementation(libs.ktor.ktor.ko)
             // put your Multiplatform dependencies here
         }
     }

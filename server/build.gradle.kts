@@ -12,10 +12,14 @@ application {
 }
 
 dependencies {
+    implementation(libs.kgraphql.ktor)
+    implementation(libs.kgraphql)
+    implementation(libs.ktor.ktor.server.core)
+    implementation(libs.ktor.ktor.server.netty)
+    implementation(libs.ktor.server.call.logging)
+    implementation(libs.ktor.server.status.pages)
     implementation(projects.shared)
     implementation(libs.logback)
-    implementation(libs.ktor.server.core)
-    implementation(libs.ktor.server.netty)
     testImplementation(libs.ktor.server.tests)
     testImplementation(libs.kotlin.test.junit)
 }
