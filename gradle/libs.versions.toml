@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.0"
+agp = "8.5.2"
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
@@ -11,18 +11,28 @@ androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.8.0"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+apolloRuntime = "4.0.0"
 compose-plugin = "1.6.11"
+exposedCore = "0.53.0"
 firebaseAuth = "23.0.0"
 junit = "4.13.2"
 kgraphql = "0.19.0"
 kotlin = "2.0.0"
-kotlinx-coroutines = "1.8.1"
-ktor = "2.3.12"
-ktorServerNetty = "2.0.0"
+kotlinx-coroutines = "1.9.0-RC.2"
+kotlinxSerializationJson = "1.7.1"
+ktor = "3.0.0-beta-2"
+ktorServerNetty = "3.0.0-beta-2"
 logback = "1.5.6"
+postgrest-bom = "2.6.0"
+postgrest = "2.6.0"
 uuid = "0.8.4"
 
 [libraries]
+apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apolloRuntime" }
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposedCore" }
+exposed-dao = { module = "org.jetbrains.exposed:exposed-dao", version.ref = "exposedCore" }
+exposed-java-time = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "exposedCore" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposedCore" }
 firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
 kgraphql = { module = "com.apurebase:kgraphql", version.ref = "kgraphql" }
 kgraphql-ktor = { module = "com.apurebase:kgraphql-ktor", version.ref = "kgraphql" }
@@ -38,21 +48,30 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktorServerNetty" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorServerNetty" }
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorServerNetty" }
 ktor-ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
 ktor-ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktorServerNetty" }
 ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktorServerNetty" }
+ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 ktor-kotlinx-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
 ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
+postgrest-bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "postgrest-bom" }
+postgrest = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "postgrest" }
 uuid = { module = "com.benasher44:uuid", version.ref = "uuid" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
+apollo-graphql-kotlin-client = { id = "com.apollographql.apollo", version.ref = "apolloRuntime" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

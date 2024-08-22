@@ -6,12 +6,16 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.apollo.graphql.kotlin.client)
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
 }
 
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
+        moduleName = "shared"
         browser {
+            binaries.executable()
             val projectDirPath = project.projectDir.path
             commonWebpackConfig {
                 devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
@@ -39,8 +43,22 @@ kotlin {
     
     sourceSets {
         commonMain.dependencies {
-//            implementation(libs.ktor.ktor.ko)
             // put your Multiplatform dependencies here
+            implementation(libs.apollo.runtime)
+//            implementation(libs.ktor.client.core)
+//            implementation(libs.ktor.client.cio)
+//            implementation(libs.ktor.client.serialization)
+//            implementation(libs.ktor.server.content.negotiation)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.kotlinx.serialization.json)
+//            implementation(libs.uuid)
+//            implementation(libs.exposed.core)
+//            implementation(libs.exposed.dao)
+//            implementation(libs.exposed.jdbc)
+//            implementation(libs.exposed.java.time)
+//            implementation(libs.kotlinx.serialization.json)
+//            implementation(libs.kotlinx.coroutines.core)
+//            implementation(libs.ktor.ktor.ko)
         }
     }
 }
