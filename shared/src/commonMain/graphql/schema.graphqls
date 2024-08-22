@@ -1,0 +1,57 @@
+type User {
+    id: Uuid
+    name: String
+    email: String
+    profilePhoto: ProfilePhoto
+    voiceRecordings: [VoiceRecording]
+    proustResponses: [ProustResponse]
+    dateDetails: [DateDetail]
+    reflections: [Reflection]
+}
+
+type ProfilePhoto {
+    id: String
+    url: String
+    userId: String
+}
+
+type VoiceRecording {
+    id: String
+    url: String
+    userId: String
+}
+
+type ProustQuestionnaire {
+    id: String
+    questions: [String]
+}
+
+type ProustResponse {
+    id: String
+    questionnaireId: String
+    userId: String
+    responses: [String]
+}
+
+type DateDetail {
+    id: String
+    userId: String
+    date: String
+    location: String
+    details: String
+}
+
+type Reflection {
+    id: String
+    userId: String
+    dateDetailId: String
+    reflection: String
+}
+
+type Query {
+    users: [User]
+}
+
+type Mutation {
+    createUser(name: String, email: String): User
+}

@@ -1,9 +1,11 @@
 package love.bside.models
 
+import com.benasher44.uuid.Uuid
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class User(val id: String, val name: String, val email: String, val profilePhoto: ProfilePhoto?, val voiceRecordings: List<VoiceRecording>?, val proustResponses: List<ProustResponse>?, val dateDetails: List<DateDetail>?, val reflections: List<Reflection>?)
+data class User(@Contextual val id: Uuid, val name: String, val email: String, val profilePhoto: ProfilePhoto?, val voiceRecordings: List<VoiceRecording>?, val proustResponses: List<ProustResponse>?, val dateDetails: List<DateDetail>?, val reflections: List<Reflection>?)
 @Serializable
 data class ProfilePhoto(val id: String, val url: String, val userId: String)
 @Serializable

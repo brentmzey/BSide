@@ -1,6 +1,7 @@
 package love.bside.schema
 
 import com.apurebase.kgraphql.schema.dsl.SchemaBuilder
+import com.benasher44.uuid.uuid4
 import love.bside.models.DateDetail
 import love.bside.models.ProfilePhoto
 import love.bside.models.ProustQuestionnaire
@@ -42,14 +43,19 @@ fun SchemaBuilder.schema() {
         resolver { -> listOf<User>() }
     }
 
-//    mutation("createUser") {
-//        resolver { name: String, email: String -> User(
-//            id = uuid(),
-//            name = name,
-//            email = email
-//        )
-//        }
-//    }
+    mutation("createUser") {
+        resolver { name: String, email: String -> User(
+            id = uuid4(),
+            name = name,
+            email = email,
+            profilePhoto = null,
+            voiceRecordings = null,
+            proustResponses = null,
+            dateDetails = null,
+            reflections = null
+        )
+        }
+    }
 
     // Add other queries and mutations similarly
 }

@@ -12,14 +12,22 @@ application {
 }
 
 dependencies {
+//            implementation(libs.exposed.core)
+//            implementation(libs.exposed.dao)
+//            implementation(libs.exposed.jdbc)
+//            implementation(libs.exposed.java.time)
     implementation(libs.kgraphql.ktor)
     implementation(libs.kgraphql)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.ktor.ktor.server.core)
     implementation(libs.ktor.ktor.server.netty)
     implementation(libs.ktor.server.call.logging)
+    implementation(libs.ktor.server.content.negotiation)
     implementation(libs.ktor.server.status.pages)
     implementation(projects.shared)
     implementation(libs.logback)
+    implementation(libs.uuid)
     testImplementation(libs.ktor.server.tests)
     testImplementation(libs.kotlin.test.junit)
 }

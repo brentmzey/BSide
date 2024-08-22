@@ -1,7 +1,6 @@
 package love.bside.database
 
 import kotlinx.coroutines.coroutineScope
-import love.bside.GraphQLClient
 import love.bside.models.User
 
 object UserRepository {
