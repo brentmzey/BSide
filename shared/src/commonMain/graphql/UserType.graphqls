@@ -1,0 +1,10 @@
+type UserType {
+    id: ID!
+    name: String
+    email: String
+    profilePhoto: ProfilePhotoType
+    voiceRecordings: [VoiceRecordingType]
+    proustResponses: [ProustResponseType]
+    dateDetails: [DateDetailType]
+    reflections: [ReflectionType]
+}

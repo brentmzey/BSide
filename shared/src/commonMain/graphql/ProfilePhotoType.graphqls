@@ -1,0 +1,5 @@
+type ProfilePhotoType {
+    id: ID!
+    url: String
+    userId: ID!
+}

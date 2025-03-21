@@ -1,0 +1,6 @@
+type ReflectionType {
+    id: ID!
+    userId: ID!
+    dateDetailId: ID!
+    reflection: String
+}

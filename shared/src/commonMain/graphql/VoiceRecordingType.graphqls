@@ -1,0 +1,5 @@
+type VoiceRecordingType {
+    id: ID!
+    url: String
+    userId: ID!
+}

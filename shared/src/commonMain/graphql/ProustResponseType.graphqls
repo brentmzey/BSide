@@ -1,0 +1,6 @@
+type ProustResponseType {
+    id: ID!
+    questionnaireId: ID!
+    userId: ID!
+    responses: [String]
+}

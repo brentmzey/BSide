@@ -1,0 +1,19 @@
+{
+  "name": "bside",
+  "version": "1.0.0",
+  "main": "codegen.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@expediagroup/graphql-kotlin-codegen": "^3.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@types/node": "^22.5.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "codegen": "node build/codegen.js"
+  }
+}

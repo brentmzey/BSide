@@ -1,0 +1,6 @@
+input ProustResponseInput {
+    id: ID!
+    questionnaireId: ID!
+    userId: ID!
+    responses: [String]
+}

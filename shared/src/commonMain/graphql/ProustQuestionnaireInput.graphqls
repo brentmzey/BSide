@@ -1,0 +1,4 @@
+input ProustQuestionnaireInput {
+    id: ID!
+    questions: [String]
+}

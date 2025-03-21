@@ -1,0 +1,6 @@
+input ReflectionInput {
+    id: ID!
+    userId: ID!
+    dateDetailId: ID!
+    reflection: String
+}

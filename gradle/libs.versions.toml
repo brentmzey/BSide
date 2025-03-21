@@ -12,6 +12,9 @@ androidx-lifecycle = "2.8.0"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 graphql-apollo = "4.0.0"
+graphql-kotlin = "7.1.5"
+#graphql-kotlin-ktor-server = "8.0.0-alpha.6"
+graphql-kotlin-ktor-server = "8.0.0"
 compose-plugin = "1.6.11"
 exposedCore = "0.53.0"
 firebaseAuth = "23.0.0"
@@ -48,6 +51,11 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+graphql-kotlin-client = { module = "com.expediagroup:graphql-kotlin-client", version.ref = "graphql-kotlin" }
+graphql-kotlin-codegen = { module = "com.expediagroup:graphql-kotlin-codegen", version.ref = "graphql-kotlin" }
+graphql-kotlin-schema-generator = { module = "com.expediagroup:graphql-kotlin-schema-generator", version.ref = "graphql-kotlin" }
+#graphql-kotlin-server = { module = "com.expediagroup:graphql-kotlin-server", version.ref = "graphql-kotlin" }
+graphql-kotlin-ktor = { module = "com.expediagroup:graphql-kotlin-ktor-server", version.ref = "graphql-kotlin-ktor-server" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
@@ -59,11 +67,11 @@ ktor-ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "
 ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktorServerNetty" }
 ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
-logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
-ktor-kotlinx-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-kotlinx-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
 ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 postgrest-bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "postgrest-bom" }
 postgrest = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "postgrest" }
 uuid = { module = "com.benasher44:uuid", version.ref = "uuid" }
@@ -72,8 +80,9 @@ uuid = { module = "com.benasher44:uuid", version.ref = "uuid" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 apollo-graphql-kotlin = { id = "com.apollographql.apollo", version.ref = "graphql-apollo" }
-jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+graphql-kotlin = { id = "com.expediagroup.graphql", version.ref = "graphql-kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

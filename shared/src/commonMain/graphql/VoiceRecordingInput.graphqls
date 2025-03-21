@@ -1,0 +1,5 @@
+input VoiceRecordingInput {
+    id: ID!
+    url: String
+    userId: ID!
+}

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.ktor)
+    alias(libs.plugins.graphql.kotlin)
+    alias(libs.plugins.kotlinSerialization)
     application
 }
 
@@ -12,16 +14,16 @@ application {
 }
 
 dependencies {
-//            implementation(libs.exposed.core)
-//            implementation(libs.exposed.dao)
-//            implementation(libs.exposed.jdbc)
-//            implementation(libs.exposed.java.time)
-    implementation(libs.kgraphql.ktor)
-    implementation(libs.kgraphql)
+    implementation(libs.exposed.core)
+    implementation(libs.exposed.dao)
+    implementation(libs.exposed.jdbc)
+    implementation(libs.exposed.java.time)
+    implementation(libs.graphql.kotlin.ktor)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.ktor.ktor.server.core)
     implementation(libs.ktor.ktor.server.netty)
+    implementation(libs.ktor.kotlinx.serialization.json)
     implementation(libs.ktor.server.call.logging)
     implementation(libs.ktor.server.content.negotiation)
     implementation(libs.ktor.server.status.pages)

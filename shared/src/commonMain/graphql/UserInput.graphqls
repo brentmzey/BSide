@@ -1,0 +1,10 @@
+input UserInput {
+    id: ID!
+    name: String
+    email: String
+    profilePhoto: ProfilePhotoInput
+    voiceRecordings: [VoiceRecordingInput]
+    proustResponses: [ProustResponseInput]
+    dateDetails: [DateDetailInput]
+    reflections: [ReflectionInput]
+}

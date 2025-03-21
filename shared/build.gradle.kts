@@ -44,17 +44,12 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
+            implementation("org.jetbrains.kotlinx:kotlinx-uuid:0.4.1")
             implementation(libs.apollo.runtime)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.uuid)
         }
-    }
-}
-
-apollo {
-    service("graphql") {
-        packageName.set("love.bside.models.graphql")
     }
 }
 
@@ -67,5 +62,16 @@ android {
     }
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
+    }
+}
+
+apollo {
+    service("service") {
+        packageName.set("love.bside.models.graphql")
+        introspection {
+//            endpointUrl.set("https://api.bside.love/graphql")
+            endpointUrl.set("http://localhost:4000/graphql")
+            schemaFile.set(file("src/commonMain/graphql/schema.graphqls"))
+        }
     }
 }

@@ -1,0 +1,4 @@
+type Query {
+    users: [UserType]
+    user(id: ID!): UserType
+}

@@ -39,6 +39,7 @@ fun BSideLogo() {
 fun App() {
 
     var users by remember { mutableStateOf<List<User>>(emptyList()) }
+    val userId: Uuid = UUID.randomUUID()
 
 //    LaunchedEffect(Unit) {
 //        loadUsers { fetchedUsers ->

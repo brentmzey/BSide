@@ -1,0 +1,8 @@
+schema:
+  - "shared/src/commonMain/graphql/schema.graphqls"
+generates:
+  output/Types.kt:
+    plugins:
+      - "@expediagroup/graphql-kotlin-codegen":
+          namingConvention: "keep" # graphql-codegen config
+          packageName: "love.bside.models.graphql" # graphql-kotlin-codegen config

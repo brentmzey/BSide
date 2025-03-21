@@ -1,0 +1,7 @@
+input DateDetailInput {
+    id: ID!
+    userId: ID!
+    date: String
+    location: String
+    details: String
+}

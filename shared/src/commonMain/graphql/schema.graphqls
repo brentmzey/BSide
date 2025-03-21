@@ -1,57 +1,116 @@
-type User {
-    id: Uuid
-    name: String
-    email: String
-    profilePhoto: ProfilePhoto
-    voiceRecordings: [VoiceRecording]
-    proustResponses: [ProustResponse]
-    dateDetails: [DateDetail]
-    reflections: [Reflection]
-}
+#schema {
+#    query: Query
+#    mutation: Mutation
+#}
+#
+#type Query {
+#    users: [UserType]
+#}
+#
+#type Mutation {
+#    createUser(name: String, email: String): UserType
+#}
 
-type ProfilePhoto {
-    id: String
-    url: String
-    userId: String
-}
+# Inputs
 
-type VoiceRecording {
-    id: String
-    url: String
-    userId: String
-}
+#input UserInput {
+#    id: ID!
+#    name: String
+#    email: String
+#    profilePhoto: ProfilePhotoInput
+#    voiceRecordings: [VoiceRecordingInput]
+#    proustResponses: [ProustResponseInput]
+#    dateDetails: [DateDetailInput]
+#    reflections: [ReflectionInput]
+#}
+#
+#input ProfilePhotoInput {
+#    id: ID!
+#    url: String
+#    userId: ID!
+#}
+#
+#input VoiceRecordingInput {
+#    id: ID!
+#    url: String
+#    userId: ID!
+#}
+#
+#input ProustQuestionnaireInput {
+#    id: ID!
+#    questions: [String]
+#}
+#
+#input ProustResponseInput {
+#    id: ID!
+#    questionnaireId: ID!
+#    userId: ID!
+#    responses: [String]
+#}
+#
+#input DateDetailInput {
+#    id: ID!
+#    userId: ID!
+#    date: String
+#    location: String
+#    details: String
+#}
+#
+#input ReflectionInput {
+#    id: ID!
+#    userId: ID!
+#    dateDetailId: ID!
+#    reflection: String
+#}
 
-type ProustQuestionnaire {
-    id: String
-    questions: [String]
-}
-
-type ProustResponse {
-    id: String
-    questionnaireId: String
-    userId: String
-    responses: [String]
-}
-
-type DateDetail {
-    id: String
-    userId: String
-    date: String
-    location: String
-    details: String
-}
-
-type Reflection {
-    id: String
-    userId: String
-    dateDetailId: String
-    reflection: String
-}
-
-type Query {
-    users: [User]
-}
-
-type Mutation {
-    createUser(name: String, email: String): User
-}
+# Output Types
+#
+#type UserType {
+#    id: ID!
+#    name: String
+#    email: String
+#    profilePhoto: ProfilePhotoType
+#    voiceRecordings: [VoiceRecordingType]
+#    proustResponses: [ProustResponseType]
+#    dateDetails: [DateDetailType]
+#    reflections: [ReflectionType]
+#}
+#
+#type ProfilePhotoType {
+#    id: ID!
+#    url: String
+#    userId: ID!
+#}
+#
+#type VoiceRecordingType {
+#    id: ID!
+#    url: String
+#    userId: ID!
+#}
+#
+#type ProustQuestionnaireType {
+#    id: ID!
+#    questions: [String]
+#}
+#
+#type ProustResponseType {
+#    id: ID!
+#    questionnaireId: ID!
+#    userId: ID!
+#    responses: [String]
+#}
+#
+#type DateDetailType {
+#    id: ID!
+#    userId: ID!
+#    date: String
+#    location: String
+#    details: String
+#}
+#
+#type ReflectionType {
+#    id: ID!
+#    userId: ID!
+#    dateDetailId: ID!
+#    reflection: String
+#}
